@@ -1,6 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Preperation
+
+add `.env.local` to the project's root folder, the following variables are expected in it:
+```bash
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY = "site_key"
+RECAPTCHA_SECRET_KEY = "secret_key"
+NEXT_PUBLIC_SERVER = "http://localhost:3000/"
+```
+
+create `config.json` file in `./database/config` and add database connection data such as the following:
+
+```bash
+{
+  "development": {
+    "username": "username",
+    "password": "password",
+    "database": "database",
+    "host": "host",
+    "dialect": "dialect",
+    "use_env_variable": 0
+  },
+  "test": {
+    "username": "username",
+    "password": "password",
+    "database": "database",
+    "host": "host",
+    "dialect": "dialect",
+    "use_env_variable": 0
+  },
+  "production": {
+    "username": "username",
+    "password": "password",
+    "database": "database",
+    "host": "host",
+    "dialect": "dialect",
+    "use_env_variable": 0
+  }
+}
+```
+to switch between `development, test and production` either change the `NODE_ENV` variable on you OS (node) or change the default value of `env` variable in `./database/connection.js`
+
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
