@@ -2,6 +2,9 @@
 
 A Voting game written with Nextjs Framework. The Database communication is abstracted by Sequelize library, hence almost any known DB technology can work with it. On every game round, a word will be picked and displayed on the main page based on the votes. In the next round the number of required votes will multiple by 2.
 
+## Demo
+
+check out the live demo on https://wallofwords.net/
 ## Preperation
 
 add `.env.local` to the project's root folder, the following variables are expected in it:
